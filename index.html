@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>한사람의 희생은 정당화 될 수 있는가? 31004 김보배</title>
+    <style>
+        /* PDF 변환 시 규격을 가로형 A4 슬라이드로 완벽 강제 */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+            background-color: #030712;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0; padding: 0;
+            background-color: #030712; color: #f9fafb;
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            -webkit-print-color-adjust: exact;
+        }
+        
+        /* 슬라이드 낱장 크기 고정 및 강제 페이지 분할 */
+        .slide {
+            width: 297mm;
+            height: 210mm;
+            position: relative;
+            page-break-after: always;
+            overflow: hidden;
+            padding: 25mm 20mm;
+        }
+        
+        /* 뒷배경 우주 효과 */
+        .slide-bg-effect {
+            position: absolute; top: -20%; right: -10%; width: 60%; height: 60%;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
+            z-index: 1;
+        }
+        
+        .slide-footer-line {
+            position: absolute; bottom: 15mm; left: 20mm; right: 20mm; height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #f43f5e, transparent);
+            opacity: 0.4; z-index: 1;
+        }
+        
+        .slide-content { position: relative; z-index: 2; height: 100%; }
+        
+        /* 타이틀 스타일 */
+        h1 { font-size: 42pt; margin: 0 0 10mm 0; line-height: 1.3; color: #0ea5e9; font-weight: bold; }
+        .slide-title { font-size: 26pt; font-weight: bold; margin: 0 0 12mm 0; color: #f3f4f6; border-left: 6px solid #0ea5e9; padding-left: 6mm; line-height: 1.2; }
+        h3 { font-size: 18pt; color: #38bdf8; margin: 0 0 4mm 0; font-weight: bold; }
+        p { font-size: 13pt; line-height: 1.6; color: #9ca3af; margin: 0 0 4mm 0; text-align: justify; }
+        strong { color: #f9fafb; font-weight: bold; }
+        
+        /* 아이패드 뷰어 깨짐을 방지하는 정적 테이블 레이아웃 기법 */
+        .layout-table { width: 100%; border-collapse: collapse; border: none; margin: 0; padding: 0; }
+        .layout-table td { padding: 0; vertical-align: top; border: none; }
+        
+        .cover-layout { width: 100%; height: 100%; text-align: center; padding-top: 40mm; }
+        .cover-subtitle { font-size: 18pt; margin-top: 8mm; color: #6b7280; letter-spacing: 2px; }
+        
+        .section-divider-layout { width: 100%; height: 100%; text-align: center; padding-top: 55mm; }
+        .section-divider-layout h2 { font-size: 34pt; color: #f9fafb; margin: 0; line-height: 1.4; font-weight: bold; }
+        .section-divider-layout .hr-line { width: 60mm; height: 4px; background: linear-gradient(90deg, #0ea5e9, #f43f5e); margin: 8mm auto; }
+        
+        /* 디자인 박스 요소 */
+        .tile-card { background: #0b1329; padding: 6mm; border-radius: 6mm; border: 1px solid #1f2937; height: 95mm; }
+        .two-col-card { background: #0b1329; border-radius: 6mm; padding: 8mm; border-top: 5px solid #0ea5e9; border-left: 1px solid #1f2937; border-right: 1px solid #1f2937; border-bottom: 1px solid #1f2937; height: 110mm; }
+        .two-col-card.deontology { border-top-color: #f43f5e; }
+        
+        .image-placeholder { width: 100%; height: 110mm; border-radius: 6mm; background-color: #111827; border: 1px solid #374151; text-align: center; color: #4b5563; font-size: 14pt; }
+        .image-placeholder-inner { padding-top: 45mm; }
+        
+        .news-box { background: rgba(244, 63, 94, 0.08); border-left: 4px solid #f43f5e; padding: 5mm; border-radius: 0 4mm 4mm 0; margin-top: 5mm; }
+        .news-box.blue { background: rgba(14, 165, 233, 0.08); border-left: 4px solid #0ea5e9; }
+        .news-tag { display: inline-block; background: #f43f5e; color: white; font-size: 9pt; font-weight: bold; padding: 1mm 3mm; border-radius: 1mm; margin-bottom: 2mm; }
+        .news-tag.blue { background: #0ea5e9; }
+        
+        .big-number { font-size: 65pt; color: #f43f5e; font-weight: bold; line-height: 1; margin-bottom: 5mm; }
+        .big-number-label { font-size: 18pt; color: #f3f4f6; font-weight: bold; margin-bottom: 5mm; }
+        
+        /* 데이터 분석 표 */
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 2mm; }
+        .data-table th { background: #111827; color: #38bdf8; padding: 4mm; text-align: left; font-size: 14pt; border-bottom: 2px solid #38bdf8; font-weight: bold; }
+        .data-table td { padding: 4mm; font-size: 12pt; border-bottom: 1px solid #374151; color: #d1d5db; line-height: 1.5; vertical-align: middle; }
+        
+        .chart-svg { width: 100%; height: 70mm; margin-top: 5mm; }
+        .qa-box { background: #0b1329; padding: 8mm; border-radius: 6mm; border: 1px solid #1f2937; text-align: center; margin: 10mm auto 0 auto; width: 85%; }
+    </style>
+</head>
+<body>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="cover-layout">
+            <h1>한 사람의 희생은<br>정당화될 수 있는가</h1>
+            <div class="cover-subtitle">과학기술 시대의 생명 윤리와 공동체 책임</div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="section-divider-layout">
+            <div class="hr-line"></div>
+            <h2>01. 프로젝트 헤일 메리 속<br>극한의 과학적 제약</h2>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="slide-title">인류 멸망 위기와 헤일 메리 호의 제약 조건</div>
+        <table class="layout-table">
+            <tr>
+                <td style="width: 55%; padding-right: 8mm;">
+                    <h3>태양을 좀먹는 초소형 미생물</h3>
+                    <p>소설 속 외계 미생물 <strong>'아스트로파지'</strong>는 태양 에너지를 급격히 흡수하여 지구를 빙하기의 파멸로 몰고 갑니다.</p>
+                    <p>이를 해결하기 위해 인류는 우주선 '헤일 메리 호'를 건조하지만, 우주적 환경은 극단적으로 한정되어 있습니다. 지구로 돌아올 <strong>편도 연료와 산소, 식량 자원이 절대적으로 부족</strong>하기 때문에 과학자들은 처음부터 편도(자살) 임무로 설계를 강행합니다.</p>
+                </td>
+                <td style="width: 45%;">
+                    <div class="image-placeholder">
+                        <div class="image-placeholder-inner">
+                            <span style="color:#6b7280; font-size:12pt;">[우주 공간 속 우주선 시각 자료]</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="slide-title">수학적 확률과 동의 없는 강제 희생</div>
+        <table class="layout-table">
+            <tr>
+                <td style="width: 35%; vertical-align: middle;">
+                    <div class="big-number">1 : 80억</div>
+                    <div class="big-number-label">그레이스 1명 vs 인류 전체</div>
+                </td>
+                <td style="width: 65%; padding-left: 8mm;">
+                    <h3>비용-편익 분석의 비정함</h3>
+                    <p>프로젝트 총괄자 에바 스트라트는 80억 명의 생존 확률을 1%라도 높이기 위해, 탑승을 거부하는 주인공 라일랜드 그레이스의 기억을 강제로 지우고 우주선에 태웁니다.</p>
+                    <p>이는 <strong>물리학적 한계(제한된 생존 자원)</strong> 속에서 시스템 전체의 생존 확률을 극대화하기 위해, 한 개인의 생명권과 자기결정권을 완전히 말살한 냉혹한 공리주의적 계산의 극치입니다.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="slide-title">과학적 메커니즘 관점에서의 이타성과 희생</div>
+        <table class="layout-table" style="table-layout: fixed;">
+            <tr>
+                <td style="padding-right: 4mm;">
+                    <div class="tile-card">
+                        <h3 style="color:#0ea5e9;">진화론: 친족 선택</h3>
+                        <p>생물학에서 개체의 희생은 유전적 공유도가 높은 집단의 생존율을 높이기 위한 진화적 전략입니다. (예: 일개미의 이타적 희생 구조)</p>
+                    </div>
+                </td>
+                <td style="padding-horizontal: 2mm;">
+                    <div class="tile-card">
+                        <h3 style="color:#38bdf8;">물리학: 닫힌 계의 법칙</h3>
+                        <p>우주선이라는 '닫힌 계' 안에서 에너지와 물질은 보존됩니다. 산소 소비율을 줄여야만 남은 전체의 생존 시간이 늘어나는 물리적 법칙이 작동합니다.</p>
+                    </div>
+                </td>
+                <td style="padding-left: 4mm;">
+                    <div class="tile-card">
+                        <h3 style="color:#a7f3d0;">상호 이타주의</h3>
+                        <p>극한 환경에서 이타적 협력 행동은 순수한 도덕심이 아니라, 종과 집단의 절멸을 막기 위해 누적되어 온 시스템 유지 공식입니다.</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="slide-title">윤리적 프레임워크의 대립</div>
+        <table class="layout-table" style="table-layout: fixed;">
+            <tr>
+                <td style="padding-right: 5mm;">
+                    <div class="two-col-card">
+                        <h3>공리주의 (Utilitarianism)</h3>
+                        <p style="color: #38bdf8; font-size:11pt; margin-bottom:2mm;"><strong>결과주의적 가치 판단</strong></p>
+                        <p style="font-size:12pt;">에바 스트라트의 입장입니다. 도덕성의 기준은 '행위가 가져오는 유용성과 결과'에 있습니다. 인류 존속이라는 거대한 공익 앞에서는 개인의 동의 없는 희생도 정당화됩니다.</p>
+                    </div>
+                </td>
+                <td style="padding-left: 5mm;">
+                    <div class="two-col-card deontology">
+                        <h3>의무론 (Deontology)</h3>
+                        <p style="color: #fb7185; font-size:11pt; margin-bottom:2mm;"><strong>정언명령과 인간의 존엄</strong></p>
+                        <p style="font-size:12pt;">칸트적 관점입니다. <strong>"인간을 결코 수단이 아닌 목적으로 대하라"</strong>는 규칙에 근거합니다. 인류 구원이라는 목적이 아무리 숭고할지라도, 개인을 도구로 소모하는 행위는 절대적 악입니다.</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="section-divider-layout">
+            <div class="hr-line"></div>
+            <h2>02. 현대 과학기술 사회의<br>실제 윤리적 딜레마 사례</h2>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="slide-title">실제 사례 ① 팬데믹 의료 자원의 제한과 분배 지침</div>
+        <table class="layout-table">
+            <tr>
+                <td style="width: 55%; padding-right: 8mm;">
+                    <h3>"누구에게 생명 유지 장치를 달 것인가"</h3>
+                    <p>코로나19 중증 환자가 폭증했을 당시, 병원의 <strong>인공호흡기와 에크모(ECMO) 자원은 물리적으로 한정</strong>되어 있었습니다.</p>
+                    <p>실제 보건당국은 비상 상황 시 <strong>'나이, 기저질환, 기대수명 및 다장기 부전 여부'</strong>를 기준으로 치료 우선순위를 선별하는 윤리 지침을 제정했습니다. 이는 더 많은 사람을 살리기 위해 생존 가능성이 낮은 환자의 자원을 제한하는 공리주의적 선택이었습니다.</p>
+                    <div class="news-box">
+                        <div class="news-tag">실제 보도 기준</div>
+                        <p style="font-size: 11pt; color: #fecdd3; margin: 0;">"의료 자원이 고갈될 경우, 개별 환자에 대한 최선의 치료 의무보다 '공동체 전체의 이익과 생존자 수 극대화'를 우선시하는 가이드라인이 현실화되었다."</p>
+                    </div>
+                </td>
+                <td style="width: 45%;">
+                    <div class="image-placeholder">
+                        <div class="image-placeholder-inner">
+                            <span style="color:#6b7280; font-size:12pt;">[의료용 중환자실 장비 관련 이미지]</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="slide-title">실제 사례 ② AI 자율주행과 국가 윤리 가이드라인</div>
+        <table class="layout-table">
+            <tr>
+                <td style="width: 55%; padding-right: 8mm;">
+                    <h3>알고리즘에 코딩되는 생명의 무게</h3>
+                    <p>자율주행 자동차가 주행 중 브레이크가 고장 났을 때, 직진하여 보행자 집단을 칠 것인가, 핸들을 꺾어 탑승자를 벽에 부딪혀 희생시킬 것인가의 문제는 현실의 법 제도로 들어왔습니다.</p>
+                    <p>실제 대한민국 국토교통부가 발표한 <strong>'자율주행차 윤리 가이드라인'</strong>에 따르면, <strong>"인명 피해를 피할 수 없을 때 성별, 연령, 인종 등 어떠한 정체성 기준으로도 인간의 생명을 차별해 계산해서는 안 된다"</strong>고 명시하며 공리주의적 생명 계산 방식에 제동을 걸었습니다.</p>
+                    <div class="news-box blue">
+                        <div class="news-tag blue">정부 가이드라인 핵심</div>
+                        <p style="font-size: 11pt; color: #e0f2fe; margin: 0;">"재산보다 '인간 생명 보호'를 무조건 최우선으로 하되, 피할 수 없는 사고에서 인적 피해의 '양적 계산'은 원칙적으로 금지한다."</p>
+                    </div>
+                </td>
+                <td style="width: 45%;">
+                    <div class="image-placeholder">
+                        <div class="image-placeholder-inner">
+                            <span style="color:#6b7280; font-size:12pt;">[AI 자율주행 알고리즘 가상 다이어그램]</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="slide-title">제한 자원 환경 속 윤리적 쟁점 종합 분석</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">분야</th>
+                    <th style="width: 25%;">물리적·과학적 한계</th>
+                    <th style="width: 35%;">실제 작동하는 윤리적 갈등</th>
+                    <th style="width: 25%;">실제 사회적 판단 기준</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>우주 탐사<br>(헤일 메리)</strong></td>
+                    <td>닫힌 계 내부의 산소, 식량, 편도 연료의 한계</td>
+                    <td>인류 전체의 존속확률 vs 동의하지 않은 개인의 생명권·자유 보장</td>
+                    <td>임무 성공 확률을 극대화하기 위한 강제 격리 및 희생</td>
+                </tr>
+                <tr>
+                    <td><strong>재난 의료<br>(팬데믹)</strong></td>
+                    <td>중환자실 병상 및 중증 환자용 에크모(ECMO) 장비 한정</td>
+                    <td>선착순 치료(의무론) vs 살릴 수 있는 환자 우선 배치(공리주의)</td>
+                    <td>의학적 보건 지침에 따른 연령·기저질환별 기대수명 계산 배분</td>
+                </tr>
+                <tr>
+                    <td><strong>인공지능<br>(자율주행)</strong></td>
+                    <td>충돌까지 남은 제동 거리 및 물리적 회피 공간의 한계</td>
+                    <td>보행자 다수를 위한 탑승자 희생 프로그래밍의 정당성 여부</td>
+                    <td>국가 가이드라인: 인간 생명의 양적·속성별 차별 계산 원칙적 금지</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="slide-title">과학기술의 팽창과 생명 판단 가치관의 다각화</div>
+        <svg class="chart-svg" viewBox="0 0 1000 240">
+            <path fill="rgba(14, 165, 233, 0.15)" d="M0,200 C200,180 400,130 600,70 C800,50 1000,10 1000,240 L0,240 Z" />
+            <path fill="none" stroke="#0ea5e9" stroke-width="4" d="M0,200 C200,180 400,130 600,70 C800,50 1000,10" />
+            <text x="10" y="230" fill="#9ca3af" font-size="14pt" font-weight="bold">전통적 도덕 (개인-개인)</text>
+            <text x="400" y="230" fill="#9ca3af" font-size="14pt" font-weight="bold">거대 사회 도덕 (디지털 보건)</text>
+            <text x="750" y="230" fill="#9ca3af" font-size="14pt" font-weight="bold">미래 생명 윤리 (우주·AI 시스템)</text>
+        </svg>
+        <p style="text-align: center; margin-top: 8mm; font-size: 14pt;">과학기술이 인간의 생사 결정권을 깊숙이 통제할수록, 희생의 정당성을 묻는 <strong>사회적 책임과 거버넌스의 필요성</strong>은 기하급수적으로 폭증하고 있습니다.</p>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content">
+        <div class="section-divider-layout" style="padding-top: 40mm;">
+            <div class="hr-line"></div>
+            <h2>결론: 효율성의 숫자를 넘어서는<br>인간 존엄성의 제도화</h2>
+            <p style="max-width: 220mm; color: #9ca3af; font-size: 15pt; line-height: 1.7; margin: 6mm auto 0 auto; text-align: center;">
+                과학은 우리에게 '누구를 희생시키면 몇 명이 사는지' 계산식을 제공할 수 있지만, 그 희생이 도덕적으로 정당한지 답할 수 없습니다. <br>
+                극단적 제약 속에서도 <strong>인간을 단순한 소모품으로 계산하지 않는 법적·윤리적 안전장치</strong>를 마련하는 것이 과학기술 시대를 살아가는 공동체의 책임입니다.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-bg-effect"></div>
+    <div class="slide-footer-line"></div>
+    <div class="slide-content" style="text-align: center; padding-top: 10mm;">
+        <h2 style="font-size: 55pt; color: #0ea5e9; font-weight: bold; margin: 0 0 4mm 0; letter-spacing: 2px;">DISCUSSION</h2>
+        <p style="font-size: 18pt; color: #38bdf8; margin-bottom: 2mm;">우리가 함께 풀어야 할 미래의 질문</p>
+        <div class="qa-box">
+            <p style="font-size: 16pt; color: #f9fafb; text-align: center; line-height: 1.8; margin: 0;">
+                "만약 국가나 인류가 당신에게 공동체를 위한 '동의 없는 생물학적 희생'을 요구한다면, 당신은 그것을 과학기술 시대의 정당한 의무로 수용하시겠습니까?"
+            </p>
+        </div>
+        <p style="font-size: 13pt; color: #4b5563; margin-top: 25mm; font-weight: bold;">발표자: 31004 김보배 | 통합 과학 및 생명 윤리 심화 탐구 발표</p>
+    </div>
+</div>
+
+</body>
+</html>
